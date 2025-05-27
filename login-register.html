@@ -52,14 +52,14 @@
             <a href="shop.html" class="nav-link ">Shop</a>
           </li>
           <li class="nav-item" id="myAccount" style="display: none;">
-                        <a href="accounts.html" class="nav-link">My Account</a>
-                    </li>
-                    <li class="nav-item" id="loggedIn" style="display: block;">
-                        <a href="login-register.html" class="nav-link">Login</a>
-                    </li>
-                    <li class="nav-item" id="logOutBtn" style="display: none;">
-                        <a href="#" class="nav-link">Logout</a>
-                    </li>
+            <a href="accounts.html" class="nav-link">My Account</a>
+          </li>
+          <li class="nav-item" id="loggedIn" style="display: block;">
+            <a href="login-register.html" class="nav-link nav-item-login">Login</a>
+          </li>
+          <li class="nav-item" id="logOutBtn" style="display: none;">
+            <a href="#" class="nav-link">Logout</a>
+          </li>
 
         </ul>
 
@@ -110,14 +110,14 @@
         <div class="login">
           <h3 class="section-title">Login</h3>
 
-          <form action="" class="from grid">
+          <form id="signinForm" action="" class="from grid">
 
-            <input type="email" id="email" placeholder="Your Email" class="form-input">
+            <input type="email" id="signinemail" placeholder="Your Email" class="form-input">
 
-            <input type="password" id="password" placeholder="Your Password" class="form-input">
+            <input type="password" id="signinPassword" placeholder="Your Password" class="form-input">
 
             <div class="form-btn">
-              <button class="btn" id="logSubmit">Login</button>
+              <button class="btn" id="signInBtn">Login</button>
               <button class="btn" id="googleLog">Google Login</button>
             </div>
 
@@ -127,14 +127,9 @@
         <div class="register">
           <h3 class="section-title">Create an Account</h3>
 
-          <form action="" class="from grid">
-
-            <input type="text" placeholder="User Name" id="name" class="form-input">
+          <form id="registerForm" action="" class="from grid">
             <input type="email" placeholder="Your Email" id="registerEmail" class="form-input">
-
             <input type="password" placeholder="Your Password" id="registerPassword" class="form-input">
-            <input type="password" placeholder="Confirm Password" id="confirmPassword" class="form-input">
-
             <div class="form-btn">
               <button class="btn" id="registerBtn">Submit & Register</button>
               <button class="btn" id="googleSignUp">Google Sign Up</button>
@@ -265,6 +260,9 @@
 
 
   </footer>
+
+  <script type="module" src="assets/js/shop-details-page/signUp.js"></script>
+  <script type="module" src="assets/js/shop-details-page/signIn.js"></script>
 
 </body>
 

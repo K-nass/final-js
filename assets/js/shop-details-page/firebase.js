@@ -1,6 +1,4 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyBjRfUhrD8izFBizJxYvGS4PPoLjV5x6Mc",
   authDomain: "iti-e2.firebaseapp.com",
@@ -10,6 +8,12 @@ const firebaseConfig = {
   appId: "1:394747800497:web:46ffd532adfab5d7aa2b90"
 
 };
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
 
 
 
@@ -49,5 +53,9 @@ export {
   app,
   getCountFromServer,
   firebaseConfig,
-  db
+  db,
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword
 };
