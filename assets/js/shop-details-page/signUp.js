@@ -1,6 +1,5 @@
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "./firebase.js";
+import { auth, createUserWithEmailAndPassword, onAuthStateChanged } from "./firebase.js";
 import { handleChangeOfLoginNavBtn } from "./handleChangeOfLoginNavBtn.js";
-const auth = getAuth();
 
 const email = document.getElementById('registerEmail');
 const password = document.getElementById('registerPassword');
@@ -30,7 +29,6 @@ onAuthStateChanged(auth, (user) => {
         const uid = user.uid;
         handleChangeOfLoginNavBtn(true);
     } else {
-        console.log('false');
         handleChangeOfLoginNavBtn(false);
     }
 });

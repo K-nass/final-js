@@ -7,13 +7,13 @@
 /* Validate if constant exists */
 
 /*=============== IMAGE GALLERY ===============*/
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const imgActive = document.querySelector('.details-img');
     const smallImg = document.querySelectorAll('.details-small-img');
 
     if (imgActive && smallImg.length > 0) {
         smallImg.forEach(img => {
-            img.addEventListener('click', function() {
+            img.addEventListener('click', function () {
                 imgActive.src = this.src;
             });
         });

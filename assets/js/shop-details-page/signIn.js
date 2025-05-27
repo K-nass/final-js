@@ -1,10 +1,9 @@
-import { getAuth, signInWithEmailAndPassword } from "./firebase.js";
-const signInForm = document.getElementById('signinForm');
-const auth = getAuth();
+import { auth, signInWithEmailAndPassword } from "./firebase.js";
+const signInBtn = document.getElementById('signinBtn');
 const email = document.getElementById('signinemail');
 const password = document.getElementById('signinPassword');
 
-signInForm.addEventListener('submit', function signin(e) {
+signInBtn.addEventListener('click', function signin(e) {
     e.preventDefault();
     const emailValue = email.value;
     const passwordValue = password.value;

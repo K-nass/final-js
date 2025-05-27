@@ -14,9 +14,9 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  signOut
 } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
-
 
 
 import {
@@ -37,6 +37,7 @@ import {
 
 
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 const db = getFirestore(app);
 
 
@@ -56,10 +57,11 @@ export {
   getCountFromServer,
   firebaseConfig,
   db,
-  getAuth,
+  auth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  signOut
 };

@@ -1,11 +1,12 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "./firebase.js";
-const auth = getAuth();
+import { auth, GoogleAuthProvider, signInWithPopup } from "./firebase.js";
 
+
+const signinForm = document.getElementById('signinForm');
+signinForm.addEventListener('submit', (e) => e.preventDefault());
 
 const provider = new GoogleAuthProvider();
-const signInForm = document.getElementById('signinForm');
-
-signInForm.addEventListener('submit', function signinWithGoogle(e) {
+const signinGoogleBtn = document.getElementById('signinGoogle');
+signinGoogleBtn.addEventListener('click', function signinWithGoogle(e) {
     e.preventDefault();
     signInWithPopup(auth, provider)
         .then((result) => {
@@ -26,29 +27,3 @@ signInForm.addEventListener('submit', function signinWithGoogle(e) {
         });
 }
 )
-
-
-
-
-
-//     import { getAuth, signInWithEmailAndPassword } from "./firebase.js";
-// const signInForm = document.getElementById('signinForm');
-// const auth = getAuth();
-// const email = document.getElementById('signinemail');
-// const password = document.getElementById('signinPassword');
-
-// signInForm.addEventListener('submit', function signin(e) {
-//     e.preventDefault();
-//     const emailValue = email.value;
-//     const passwordValue = password.value;
-//     signInWithEmailAndPassword(auth, emailValue, passwordValue)
-//         .then((userCredential) => {
-//             const user = userCredential.user;
-//             window.location.href = "../index.html";
-//         })
-//         .catch((error) => {
-//             const errorCode = error.code;
-//             const errorMessage = error.message;
-//         });
-// }
-// )
